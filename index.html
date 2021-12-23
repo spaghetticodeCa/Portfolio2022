@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<nav class="nav">
+    <a class="logo" href="">
+        <img class="logo__img" src="logo/spaghettiCodeLogoWhite.svg" alt="">
+    </a>
+    <ul class="nav__list">
+        <li class="nav__item nav__item--1">
+            <a class="nav__link">this is a test</a>
+        </li>
+        <li class="nav__item nav__item--2">
+            <a class="nav__link">this is a test</a>
+        </li>
+        <li class="nav__item nav__item--3">
+            <a class="nav__link">this is a test</a>
+        </li>
+        <li class="nav__item nav__item--4">
+            <a class="nav__link">this is a test</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="main">
+    <!-- <img class="img" src="tommy.png" alt=""> -->
+    <div class="headTxt">
+        <div class="headTxt__wrap">
+            <h1 class="headTxt__title headTxt__title--1">Création</h1>
+            <h1 class="headTxt__title headTxt__title--2">Programmation</h1>
+            <h1 class="headTxt__title headTxt__title--3">Maintenance</h1>
+            <h3 class="headTxt__title headTxt__title--sub headTxt__title--4">de votre site web</h3>
+        </div>
+        <span class="headTxt__btnCont">
+            <a class="headTxt__btn" href="">contactez-nous</a>
+        </span>
+    </div>
+    <div class="headImg">
+        <img class="headImg__img headImg__img--foreground" src="images/test/tommy.png" alt="">
+        <img class="headImg__img headImg__img--background1" src="images/test/chaise.png" alt="">
+        <img class="headImg__img headImg__img--background2" src="images/test/computer.png" alt="">
+        <img class="headImg__img headImg__img--background3" src="images/test/web.png" alt="">
+        <img class="headImg__img headImg__img--background4" src="images/test/spaghetticodeWriting.png" alt="">
+    </div>
+    
+</main>
+
+
+<style>
+
+
+    :root{
+        --darkGreen : #0f3500;
+        --lightGreen : #2ea10196;
+        --inkBlue: rgb(0, 86, 247);
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html, body{
+        /* min-height: 100%; */
+        height: 100vh;
+    }
+
+    @font-face {
+        font-family: inky;
+        src: url(font/inky.ttf);
+    }
+
+    body{
+        background-image:  url("background/paper.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .nav{
+        padding: 2rem;
+        display: flex;
+        width: 100%;
+        height: 10rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(4% 1%, 98% 5%, 94% 100%, 0% 100%);
+        width: 10rem;
+        min-height: 100%;
+        cursor: pointer;
+
+        background-image: url("background/whiterPaper.png");
+        filter: brightness(110%);
+        padding: 2rem;
+        color: #2ea10196;
+    }
+    .logo__img{
+        width: 60%;
+        height: auto;
+    }
+
+    .nav__list{
+        list-style-type : none;
+        display: flex;
+    }
+
+    .nav__item{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("background/whiterPaper.png");
+        filter: brightness(110%);
+        width: 100%;
+        padding: 2rem;
+        margin: 0 1rem;
+        color: #2ea10196;
+    }
+
+    .nav__item:hover{
+        color: #0f3500;
+        transform: rotate(2deg);
+    }
+
+    .nav__item--1{
+        clip-path: polygon(0 11%, 97% 3%, 100% 100%, 11% 100%);
+        /*https://bennettfeely.com/clippy/*/
+    }
+
+    .nav__item--2{
+        clip-path: polygon(6% 3%, 87% 3%, 98% 97%, 0 100%);
+    }
+
+    .nav__item--3{
+        clip-path: polygon(2% 0, 100% 8%, 94% 100%, 0 95%);
+    }
+
+    .nav__item--4{
+        clip-path: polygon(3% 4%, 96% 0, 100% 96%, 0 100%);
+    }
+
+    .nav__link{
+        font-family: inky;
+        font-size: 1.5rem;
+     
+    }
+/********************************************** main *********************************/
+
+.main{
+    padding: 5rem;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: auto;
+    /* background-color: bisque; */
+    /* animation: rotate 1s linear forwards; */
+}
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg) translate(0%);
+    }   
+    to{
+        transform: rotate(90deg) translate(100%);
+    } 
+}
+
+.headTxt{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.headTxt__wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    clip-path: polygon(3% 4%, 99% 5%, 100% 98%, 0% 100%);
+    padding: 2rem;
+
+}
+
+.headTxt__wrap::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image : url("background/paper123.jpg");
+    filter: brightness(120%);
+    z-index: -1;
+}
+
+.headTxt__title{
+    position: relative;
+    color: var(--inkBlue);
+    font-size: 4rem;
+    font-family: inky;
+    opacity: 0;
+    z-index: 3;
+    margin: 1rem 0;
+    letter-spacing: 0.3rem;
+}
+.headTxt__title--1{
+    animation: fadeInTitle 0.5s 0s linear forwards;
+}
+.headTxt__title--2{
+    animation: fadeInTitle 0.5s 0.15s linear forwards;
+}
+.headTxt__title--3{
+    animation: fadeInTitle 0.5s 0.30s linear forwards;
+}
+.headTxt__title--4{
+    animation: fadeInTitle 0.5s 0.45s linear forwards;
+}
+
+@keyframes fadeInTitle {
+    0%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.headTxt__title--sub{
+    font-size: 2rem;
+    color: var(--lightGreen);
+}
+
+.headTxt__btn{
+    position: relative;
+    font-family: inky;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    clip-path: polygon(0 0, 97% 5%, 99% 99%, 2% 98%);
+}
+.headTxt__btn::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image : url("background/cardboard.jpg");
+    filter: brightness(140%);
+    z-index: -1;
+}
+.headTxt__btnCont:hover{
+   transform: rotate(-3deg);
+}
+.headTxt__btn:hover{
+    color: var(--inkBlue);
+}
+.headTxt__btnCont{
+    margin: 2rem 0;
+    filter: drop-shadow(-1px 6px 3px black);
+        /* transform: rotate(3deg); */
+
+}
+
+
+
+
+.headImg__img{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    /* border: solid 2px white; */
+    /* transform: translate(-1rem, 1rem); */
+}
+
+.headImg__img--foreground{
+    z-index: 2;
+    animation: imgHover1 2.5s linear forwards infinite; 
+
+}
+.headImg__img--background1{
+    width: 100%;
+    z-index: 1;
+    animation: imgHover1 3.5s linear forwards infinite; 
+
+}
+.headImg__img--background2{
+    width: 100%;
+    z-index: 1;
+    animation: imgHover1 5s linear forwards infinite; 
+}
+.headImg__img--background3{
+    width: 100%;
+    z-index: 2;
+    animation: imgHover1 3s 0.2s linear forwards infinite; 
+}
+.headImg__img--background4{
+    width: 100%;
+    z-index: 3;
+    animation: imgHover1 2.7s 0.2s linear forwards infinite; 
+}
+
+@keyframes imgHover1 {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(0.5rem, 0.5rem);
+    }
+    50%{
+        transform: translate(-0.5rem, 0.5rem);
+    }
+    75%{
+        transform: translate(0.5rem, -0.5rem);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+
+}
+
+@keyframes imgHover2 {
+    0%{
+        transform: translate(50%, 0px);
+    }
+    25%{
+        transform: translate(calc(50% + 1rem), 1rem);
+    }
+    50%{
+        transform: translate(calc(50% - 1rem), 1rem);
+    }
+    75%{
+        transform: translate(calc(50% + 1rem), -1rem);
+    }
+    100%{
+        transform: translate(50%, 0px);
+    }
+
+}
+
+@keyframes imgHover3 {
+    0%{
+        transform: translate(-50%, 0px);
+    }
+    25%{
+        transform: translate(calc(-50% + 1rem), 1rem);
+    }
+    50%{
+        transform: translate(calc(-50% - 1rem), 1rem);
+    }
+    75%{
+        transform: translate(calc(-50% + 1rem), -1rem);
+    }
+    100%{
+        transform: translate(-50%, 0px);
+    }
+
+}
+
+@keyframes imgHover4 {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(1rem, 1rem);
+    }
+    50%{
+        transform: translate(-1rem, 1rem);
+    }
+    75%{
+        transform: translate(1rem, -1rem);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+.headImg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 30rem;
+
+}
+
+/*
+ ressources : 
+https://en.fonttextup.com/tattoo-text-graphics.html
+ */
+
+</style>
+</body>
+</html>
